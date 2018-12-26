@@ -27,13 +27,6 @@ public class HttpClientReaderTest {
 	}
 	
 	@Test
-	public void testReadWithGzip() throws IOException {
-		NewsFeed feed = HttpClientReader.read("http://blog.dictat.org/?feed=rss2");
-		Assert.assertNotNull(feed);
-		Assert.assertTrue(feed.isTransportCompressed());
-	}
-
-	@Test
 	public void testReread() throws IOException {
 		NewsFeed feed = HttpClientReader.read("http://iwillworkforfood.blogspot.com/feeds/posts/default");
 		Assert.assertNotNull(feed);
